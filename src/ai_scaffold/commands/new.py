@@ -2,15 +2,12 @@
 
 from __future__ import annotations
 
-import os
-import sys
 from pathlib import Path
 
 import click
 from rich.console import Console
 from rich.panel import Panel
 from rich.table import Table
-from rich import print as rprint
 
 from ai_scaffold.scaffold import ScaffoldConfig, Scaffolder
 from ai_scaffold.providers import AI_PROVIDERS, AUTH_PROVIDERS, DB_PROVIDERS, PAYMENT_PROVIDERS

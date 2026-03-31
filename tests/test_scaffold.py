@@ -4,7 +4,6 @@ from __future__ import annotations
 
 from pathlib import Path
 
-import pytest
 
 from ai_scaffold.scaffold import ScaffoldConfig, Scaffolder
 
@@ -72,7 +71,7 @@ def test_scaffolder_no_docker(tmp_path: Path) -> None:
         monitoring=False,
         output_dir=tmp_path,
     )
-    result = Scaffolder(config).scaffold()
+    Scaffolder(config).scaffold()
     project_dir = tmp_path / "nodock"
     assert not (project_dir / "Dockerfile").exists()
     assert not (project_dir / "docker-compose.yml").exists()
